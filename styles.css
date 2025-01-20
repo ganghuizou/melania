@@ -1,0 +1,361 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+header {
+    background: var(--background-color);
+    color: var(--text-color);
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.header-content h1 {
+    font-size: 2.2em;
+    margin-bottom: 2px;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 0.9em;
+    margin: 0;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+nav {
+    background: #000;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 0.9em;
+}
+
+.buy-now {
+    background: #000;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.buy-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.buy-button {
+    padding: 15px 30px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.buy-card {
+    background: #000;
+    color: white;
+}
+
+.buy-crypto {
+    color: #000;
+}
+
+.footer-links {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9em;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.peak-performance {
+    background: rgba(255, 255, 255, 0.2);
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 10px;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.peak-number {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-right: 5px;
+    line-height: 1;
+}
+
+.peak-text {
+    font-size: 0.9em;
+    line-height: 1;
+}
+
+section {
+    padding: 15px 0;
+    background: white;
+    margin: 5px 0;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.stat-card {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.highlight {
+    font-size: 1.5em;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.detail {
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+}
+
+.tokenomics-info {
+    background: rgba(255, 105, 180, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.tokenomics-info p {
+    margin: 15px 0;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.disclaimer {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 1.8em;
+    }
+    
+    .subtitle {
+        font-size: 0.8em;
+    }
+    
+    .peak-number {
+        font-size: 1.5em;
+    }
+    
+    .peak-text {
+        font-size: 0.8em;
+    }
+    
+    .container {
+        padding: 8px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    
+    .stat-card {
+        padding: 8px;
+    }
+    
+    .highlight {
+        font-size: 1.2em;
+    }
+    
+    .chart-container {
+        height: 250px;
+    }
+    
+    .chart-container iframe {
+        height: 280px;
+    }
+}
+
+.update-flash {
+    animation: flash 1s ease-out;
+}
+
+@keyframes flash {
+    0% { background-color: rgba(255, 105, 180, 0.3); }
+    100% { background-color: transparent; }
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+    height: 500px;
+}
+
+.chart-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: #1a1a1a;
+    z-index: 10;
+}
+
+.chart-container iframe {
+    width: 100%;
+    height: 530px;
+    border: none;
+    margin-bottom: -30px;
+}
+
+.price-chart {
+    background: #ffffff;
+    padding: 5px 0;
+}
+
+.price-chart h2 {
+    text-align: center;
+    margin: 5px 0;
+    font-style: italic;
+    font-size: 1.3em;
+    line-height: 1.2;
+}
+
+.market-stats {
+    padding: 15px 0;
+}
+
+/* 添加自定义样式来改善图表显示 */
+.price-chart {
+    background: #ffffff;
+    padding: 40px 0;
+}
+
+.price-chart h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-style: italic;
+} 

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melania Coin ($MELANIA) - First Lady Digital Collectible | Real-time Price & Information</title>
+    <meta name="description" content="$MELANIA - A digital collectible launched by Melania Trump. Reaching $8123.27M market cap within hours of launch. Get real-time price updates and information about Melania Coin.">
+    <meta name="keywords" content="Melania Coin, $MELANIA, Melania Trump Cryptocurrency, First Lady Digital Collectible, Melania Token">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="canonical" href="https://melaniameme.com/" />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Melania Coin ($MELANIA)</h1>
+            <p class="subtitle">The First Lady Digital Collectible</p>
+            <div class="peak-performance">
+                <span class="peak-number">50x</span>
+                <span class="peak-text">First Hour Growth</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="price-chart">
+        <div class="container">
+            <h2>Melania Coin Price Chart</h2>
+            <div class="chart-container">
+                <iframe 
+                    height="500"
+                    width="100%" 
+                    src="https://dexscreener.com/solana/FUAfBo2jgks6gB4Z4LfZkqSZgzNucisEHqnNebaRxM1P?embed=1&theme=dark&trades=0&info=0&chartview=1"
+                    frameborder="0"
+                    loading="eager"
+                    importance="high"
+                    style="border-radius: 10px; background: #1a1a1a;">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="market-stats">
+        <div class="container">
+            <h2>Melania Coin Market Performance</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Initial Market Cap</h3>
+                    <p class="highlight market-cap-value">$8123.27M</p>
+                    <p class="detail">Achieved Within First Hour</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Launch Price</h3>
+                    <p class="highlight price-value">$8.12</p>
+                    <p class="detail">50% Above Initial Price</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Early Investors</h3>
+                    <p class="highlight">20,000+</p>
+                    <p class="detail">First Hour Participants</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="intro">
+        <div class="container">
+            <h2>About Melania Coin ($MELANIA)</h2>
+            <p>Launched on January 19, 2025, Melania Coin represents a unique digital collectible in the cryptocurrency space. The token achieved remarkable market response with substantial valuation growth within minutes of launch.</p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Key Information</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Launch Details</h3>
+                    <p>Announced on X (formerly Twitter) as a digital collectible project</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Market Impact</h3>
+                    <p>Built on Solana blockchain with significant network activity</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Important Notice</h3>
+                    <p>This token functions as a digital collectible, not as an investment contract or security</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tokenomics">
+        <div class="container">
+            <h2>$MELANIA Tokenomics</h2>
+            <div class="tokenomics-info">
+                <p><i class="fas fa-coins"></i> Total Supply: 1,000,000,000 $MELANIA</p>
+                <p><i class="fas fa-lock"></i> Team Token Lock: 30-day initial lockup, 12-month linear unlock</p>
+                <p><i class="fas fa-chart-pie"></i> Token Distribution:
+                    <br>- Team: 35% (350M tokens)
+                    <br>- Treasury: 20% (200M tokens)
+                    <br>- Community: 20% (200M tokens)
+                    <br>- Public Sale: 15% (150M tokens)
+                    <br>- Liquidity: 10% (100M tokens)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="disclaimer-section">
+        <div class="container">
+            <h2>Notice</h2>
+            <p class="disclaimer">$MELANIA functions as a digital collectible. It is not intended as an investment opportunity, investment contract, or security of any type.</p>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Get Started</h2>
+            <p>Visit the official website for more information</p>
+            <a href="https://melaniameme.com/" target="_blank" class="cta-button">Visit Website</a>
+            <p class="disclaimer">Cryptocurrency investments are high-risk. Please invest wisely.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Melania Coin ($MELANIA). All rights reserved.</p>
+            <p class="disclaimer">This website is for informational purposes only.</p>
+            <div class="footer-links">
+                <a href="https://trumpcoin.space/" target="_blank">Trump Coin</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    async function updateTokenData() {
+        try {
+            const tokenAddress = 'FUAfBo2jgks6gB4Z4LfZkqSZgzNucisEHqnNebaRxM1P';
+            const response = await axios.get(`https://api.dexscreener.com/latest/dex/tokens/${tokenAddress}`);
+            
+            if (response.data.pairs && response.data.pairs[0]) {
+                const pairData = response.data.pairs[0];
+                
+                // 更新市值
+                const marketCap = parseFloat(pairData.fdv);
+                const marketCapElement = document.querySelector('.market-cap-value');
+                if (marketCapElement) {
+                    marketCapElement.textContent = `$${(marketCap / 1e6).toFixed(2)}M`;
+                }
+                
+                // 更新价格涨幅
+                const priceChange = parseFloat(pairData.priceChange.h24);
+                const priceChangeElement = document.querySelector('.price-change');
+                if (priceChangeElement) {
+                    priceChangeElement.textContent = `${Math.abs(priceChange).toFixed(2)}%`;
+                }
+                
+                // 更新当前价格
+                const currentPrice = parseFloat(pairData.priceUsd);
+                const priceValueElement = document.querySelector('.price-value');
+                if (priceValueElement) {
+                    priceValueElement.textContent = `$${currentPrice.toFixed(2)}`;
+                }
+            }
+        } catch (error) {
+            console.error('Error fetching token data:', error);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        updateTokenData();
+        setInterval(updateTokenData, 5000);
+    });
+    </script>
+</body>
+</html> 
